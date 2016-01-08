@@ -5,7 +5,7 @@ Share your file using AirDrop with Command Line
 # How to install
 
 ```
-$ go get github.com/ktakuya/airdrop
+$ go get github.com/taku-k/airdrop
 ```
 
 # How to use
@@ -14,7 +14,7 @@ $ go get github.com/ktakuya/airdrop
 $ airdrop /file/to/path
 ```
 
-Don't append 'file://' to the head of the path, because 'file://' is appended automatically
+Don't append `file://` to the head of the path, because `file://` is appended automatically
 
 # Why I create?
 
