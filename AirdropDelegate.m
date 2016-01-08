@@ -14,7 +14,8 @@
     NSSharingService *sharingService = [NSSharingService sharingServiceNamed:sharingServiceName];
     sharingService.delegate = self;
     NSMutableArray *mutableItems = [NSMutableArray array];
-    NSURL *url = [NSURL URLWithString:_urlName];
+    NSString *escapedUrl = [_urlName stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSURL *url = [NSURL URLWithString:escapedUrl];
     [mutableItems addObject:url];
     [sharingService performWithItems:mutableItems];
 }
